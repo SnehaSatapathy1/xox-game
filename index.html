@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XOX Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>XOX Game</h1>
+        
+        <!-- Player names input section -->
+        <div class="player-names">
+            <input type="text" id="player-x-name" placeholder="Player X Name" value="Player X">
+            <input type="text" id="player-o-name" placeholder="Player O Name" value="Player O">
+            <button id="set-names-btn" class="set-names-btn">Set Names</button>
+        </div>
+
+        <!-- Score tracking section -->
+        <div class="score-board">
+            <div class="score-item">
+                <span id="player-x-display">Player X</span>
+                <span class="score" id="score-x">0</span>
+            </div>
+            <div class="score-item">
+                <span>Draws</span>
+                <span class="score" id="score-draws">0</span>
+            </div>
+            <div class="score-item">
+                <span id="player-o-display">Player O</span>
+                <span class="score" id="score-o">0</span>
+            </div>
+        </div>
+
+        <!-- Current game info -->
+        <div class="game-info">
+            <p>Current Player: <span id="current-player">Player X</span></p>
+        </div>
+
+        <!-- Game board -->
+        <div class="board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <!-- Result message with animation -->
+        <div id="result" class="result"></div>
+
+        <!-- Game history section -->
+        <div class="history-section">
+            <h3>Game History</h3>
+            <ul id="history-list" class="history-list"></ul>
+        </div>
+
+        <!-- Control buttons -->
+        <div class="button-group">
+            <button id="reset-btn" class="reset-btn">Reset Game</button>
+            <button id="clear-history-btn" class="clear-history-btn">Clear History</button>
+            <button id="reset-all-btn" class="reset-all-btn">Reset All Data</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
